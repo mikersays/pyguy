@@ -1,43 +1,46 @@
+# Python Environment Setup Script
 
-Python3 Environment Setup Script
-This script automates the process of setting up a Python3 environment and installing a list of popular Python3 packages. It is intended to save you time and ensure consistency across different systems.
+This is a bash script to ensure `python3` and `pip3` are installed on your system and setup a new Python virtual environment with popular Python packages.
 
-Prerequisites
-This script requires both Python3 and pip3 installed on your system. The script will check for these before proceeding.
+## Requirements
 
-Python3: If Python3 is not installed, you will need to install it first. You can download it from the official Python website: https://www.python.org/downloads/
+- Bash shell
+- Python3
+- pip3
 
-pip3: This is a Python package installer. It usually comes with the Python installation. If pip3 is not installed, follow the instructions on this page: https://pip.pypa.io/en/stable/installing/
+If Python3 and pip3 are not installed in your system, the script will remind you to install them first.
 
-Virtual Environment (optional)
-The script has the option to create a Python virtual environment. This is not required, but it is recommended for isolating your Python environment and avoiding conflicts with other packages or Python versions installed on your system.
+## Usage
 
-If you do not wish to use a virtual environment, you may comment out or delete the lines regarding virtual environment setup (creating and activating the venv).
+1. Download the bash script to your local machine.
+2. Change the permissions of the script file to make it executable:
 
-Packages Installed
-The script installs the following popular Python3 packages:
+    ```
+    chmod +x setup_python_env.sh
+    ```
 
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-scipy
-requests
-beautifulsoup4
-Flask
-Django
-sqlalchemy
-pytest
-jupyter
-pylint
-tensorflow
-keras
-torch
-Running the Script
-Download the script to a local directory.
-Open a terminal and navigate to the directory where you downloaded the script.
-Run the script using the following command:
-`./script-name.sh`
-Replace script-name.sh with the actual name of the script file.
-After running the script, all the listed packages will be installed, and you can start using them for your Python projects. Enjoy coding!
+3. Run the bash script in your terminal:
+
+    ```
+    ./setup_python_env.sh
+    ```
+
+The script will:
+
+- Check if Python3 and pip3 are installed in your system.
+- Create a virtual environment (this step is optional and can be removed or commented out if not needed).
+- Upgrade pip3 to the latest version.
+- Install popular Python3 packages which include `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, `requests`, `beautifulsoup4`, `Flask`, `Django`, `sqlalchemy`, `pytest`, `jupyter`, `pylint`, `tensorflow`, `keras`, and `torch`.
+
+At the end of the script, a message "All packages have been installed. Enjoy coding!" will appear to confirm the successful installation.
+
+**Note:** The script creates a new Python virtual environment, so the installed packages will not affect your global Python environment. If you don't want to use the virtual environment, you can remove or comment out the relevant lines in the script.
+
+## Troubleshooting
+
+In case of any issues with the script execution:
+
+- Ensure your terminal is running a Bash shell. Use `echo $SHELL` to check your current shell.
+- Check if Python3 and pip3 are installed and in your PATH. You can verify this by running `python3 --version` and `pip3 --version`.
+- Make sure you have the necessary permissions to install packages and create a virtual environment in the directory where you are running the script.
+- Make sure you have an active internet connection, as the script needs to download packages from the internet.
