@@ -37,6 +37,7 @@ packages=(
   tensorflow
   keras
   torch
+  openai
 )
 
 echo "Installing popular Python3 packages..."
