@@ -16,13 +16,13 @@ If Python3 and pip3 are not installed in your system, the script will remind you
 2. Change the permissions of the script file to make it executable:
 
     ```
-    chmod +x setup_python_env.sh
+    chmod +x pyguy.sh
     ```
 
 3. Run the bash script in your terminal:
 
     ```
-    ./setup_python_env.sh
+    ./pyguy.sh
     ```
 
 The script will:
